@@ -1,0 +1,270 @@
+FOTOS E VÍDEOS DO GUIA DO RIO
+==============================
+
+Cada lugar do guia tem uma pasta aqui dentro. Coloque até 10 arquivos por pasta,
+numerados a partir de 1:
+
+   1.jpeg   2.jpeg   3.mp4   4.jpeg   ...   10.jpeg
+
+- Fotos: .jpeg, .jpg, .png ou .webp
+- Vídeos: .mp4 (recomendado) ou .webm. Vídeos .mov do iPhone podem não tocar
+  em todos os navegadores; se possível, converta para .mp4.
+- Use letras minúsculas na extensão (1.jpeg, não 1.JPEG).
+- O carrossel mostra só os arquivos que existirem. Se a pasta tiver 4 arquivos,
+  aparecem 4.
+- O arquivo 1 (se for foto) vira a capa do card na página.
+- Fotos de até ~500 KB (1600 px de largura) carregam rápido no celular.
+
+Quando terminar de colocar as fotos e for publicar para o público, abra
+js/dados.js e troque  modoEdicao: true  por  modoEdicao: false
+(assim o visitante vê 'Fotos em breve' em vez do nome da pasta).
+
+Para criar um lugar novo: adicione em js/dados.js e crie a pasta com o nome
+que aparece no pop-up do lugar (ou defina o campo m: "nome-da-pasta").
+
+LISTA DE PASTAS (212 lugares)
+-----------------------------
+
+CARTÕES-POSTAIS
+  cristo-redentor                        Cristo Redentor
+  pao-de-acucar                          Bondinho do Pão de Açúcar
+  escadaria-selaron                      Escadaria Selarón
+  arcos-da-lapa                          Arcos da Lapa
+  estadio-do-maracana                    Estádio do Maracanã
+  lagoa-rodrigo-de-freitas               Lagoa Rodrigo de Freitas
+  boulevard-olimpico                     Boulevard Olímpico e Orla Conde
+  roda-gigante-yup-star                  Roda-gigante Yup Star
+  copacabana-palace                      Copacabana Palace
+  sambodromo                             Sambódromo da Marquês de Sapucaí
+  cidade-do-samba                        Cidade do Samba
+
+PÔR E NASCER DO SOL
+  por-do-sol-arpoador                    Pôr do sol no Arpoador
+  por-do-sol-morro-da-urca               Pôr do sol no Morro da Urca
+  por-do-sol-vidigal                     Pôr do sol no Vidigal
+  amanhecer-dois-irmaos                  Nascer do sol no Morro Dois Irmãos
+  por-do-sol-rocinha                     Pôr do sol na Rocinha com guia morador
+  escuna-por-do-sol                      Veleiro ao pôr do sol na Baía de Guanabara
+
+PRAIAS
+  praia-de-copacabana                    Praia de Copacabana
+  praia-de-ipanema                       Praia de Ipanema
+  praia-do-leblon                        Praia do Leblon
+  praia-do-leme                          Praia do Leme
+  praia-vermelha                         Praia Vermelha
+  praia-da-barra-da-tijuca               Praia da Barra da Tijuca
+  praia-do-pepe                          Praia do Pepê
+  praia-da-reserva                       Praia da Reserva
+  prainha                                Prainha
+  praia-de-grumari                       Praia de Grumari
+  praia-e-pedra-do-pontal                Praia e Pedra do Pontal
+  praia-de-sao-conrado                   Praia de São Conrado
+  praia-da-macumba                       Praia da Macumba
+
+MUSEUS
+  museu-do-amanha                        Museu do Amanhã
+  mar                                    MAR — Museu de Arte do Rio
+  aquario                                AquaRio
+  ccbb-rio                               CCBB Rio — Centro Cultural Banco do Brasil
+  museu-nacional                         Museu Nacional (Quinta da Boa Vista)
+  museu-historico-nacional               Museu Histórico Nacional
+  museu-nacional-de-belas-artes          Museu Nacional de Belas Artes
+  museu-da-republica                     Museu da República (Palácio do Catete)
+  mam-rio                                MAM Rio — Museu de Arte Moderna
+  ims-rio                                IMS Rio — Instituto Moreira Salles
+  planetario-da-gavea                    Planetário da Gávea
+  museu-casa-do-pontal                   Museu Casa do Pontal
+  museu-bispo-do-rosario-arte-contemporanea Museu Bispo do Rosário Arte Contemporânea
+  museu-do-samba                         Museu do Samba
+  museu-carmen-miranda                   Museu Carmen Miranda
+  museu-da-vida                          Museu da Vida — Fiocruz
+  mast                                   MAST — Museu de Astronomia
+  casa-de-rui-barbosa                    Casa de Rui Barbosa
+  museu-chacara-do-ceu                   Museu Chácara do Céu
+  forte-de-copacabana                    Forte de Copacabana
+  espaco-cultural-da-marinha             Espaço Cultural da Marinha e Museu Naval
+  museu-aeroespacial                     Museu Aeroespacial
+  paco-imperial                          Paço Imperial
+  instituto-pretos-novos                 Instituto Pretos Novos
+  theatro-municipal                      Theatro Municipal
+  biblioteca-nacional                    Biblioteca Nacional
+  real-gabinete                          Real Gabinete Português de Leitura
+  academia-brasileira-de-letras          Academia Brasileira de Letras
+
+HISTÓRIA E ARQUITETURA
+  cidade-das-artes-bibi-ferreira         Cidade das Artes Bibi Ferreira
+  santa-cruz-historica                   Santa Cruz histórica — Ponte dos Jesuítas e Hangar do Zeppelin
+  mosteiro-de-sao-bento                  Mosteiro de São Bento
+  igreja-da-candelaria                   Igreja da Candelária
+  catedral-metropolitana                 Catedral Metropolitana
+  convento-santo-antonio                 Convento de Santo Antônio e São Francisco da Penitência
+  praca-xv                               Praça XV, Arco do Teles e Travessa do Comércio
+  antiga-se                              Antiga Sé (N. Sra. do Carmo)
+  ilha-fiscal                            Ilha Fiscal
+  pequena-africa                         Pequena África e Cais do Valongo
+  morro-da-conceicao                     Morro da Conceição
+  santa-teresa-e-o-bondinho              Santa Teresa e o Bondinho
+  parque-das-ruinas                      Parque das Ruínas
+  igreja-da-gloria                       Igreja da Glória do Outeiro
+  igreja-da-penha                        Basílica de Nossa Senhora da Penha
+  fortaleza-de-sao-joao                  Fortaleza de São João
+  sitio-roberto-burle-marx               Sítio Roberto Burle Marx
+  campo-de-santana                       Campo de Santana
+  garota-de-ipanema                      Garota de Ipanema (antigo Bar Veloso)
+
+TRILHAS
+  morro-dois-irmaos                      Morro Dois Irmãos
+  pedra-bonita                           Pedra Bonita
+  pedra-da-gavea                         Pedra da Gávea
+  pedra-do-telegrafo                     Pedra do Telégrafo
+  pedra-branca                           Parque Estadual da Pedra Branca — Pau da Fome
+  trilha-claudio-coutinho                Pista Cláudio Coutinho e trilha do Morro da Urca
+  pico-da-tijuca                         Pico da Tijuca
+  trilha-parque-lage-cristo              Trilha Parque Lage → Cristo Redentor
+  trilha-transcarioca                    Trilha Transcarioca
+  praias-selvagens                       Praias Selvagens de Guaratiba
+  cachoeiras-da-tijuca                   Cachoeiras da Floresta da Tijuca
+  morro-do-leme                          Morro do Leme e Forte Duque de Caxias
+
+PARQUES E JARDINS
+  floresta-da-tijuca                     Floresta da Tijuca (Parque Nacional)
+  jardim-botanico                        Jardim Botânico
+  parque-lage                            Parque Lage
+  aterro-do-flamengo                     Aterro do Flamengo
+  quinta-da-boa-vista                    Quinta da Boa Vista
+  bioparque-do-rio                       BioParque do Rio
+  parque-madureira                       Parque Madureira
+  parque-chico-mendes                    Parque Chico Mendes
+  bosque-da-barra                        Bosque da Barra
+
+MIRANTES
+  vista-chinesa                          Vista Chinesa
+  mirante-dona-marta                     Mirante Dona Marta
+  mirante-do-leblon                      Mirante do Leblon
+  mureta-da-urca                         Mureta da Urca
+  mirante-do-pedrao                      Mirante do Pedrão
+  mirante-do-pasmado                     Mirante do Pasmado
+
+SAMBA E MÚSICA AO VIVO
+  pedra-do-sal                           Roda de Samba da Pedra do Sal
+  samba-do-trabalhador                   Samba do Trabalhador
+  carioca-da-gema                        Carioca da Gema
+  rio-scenarium                          Rio Scenarium
+  beco-do-rato                           Beco do Rato
+  bip-bip                                Bip Bip
+  circo-voador                           Circo Voador
+  fundicao-progresso                     Fundição Progresso
+  blue-note-rio                          Blue Note Rio
+  ensaios-escolas-de-samba               Ensaios das escolas de samba
+  quadrilatero-do-samba                  Quadrilátero do Samba — Vila Isabel
+  grandes-casas-de-shows                 Grandes casas de shows
+
+BALADAS E FESTAS
+  lapa-a-noite                           Lapa à noite
+  rua-do-senado                          Rua do Senado
+  bares-da-barra                         Bares da Barra — Olegário Maciel
+  rua-farme-de-amoedo                    Rua Farme de Amoedo
+  fosfobox                               Fosfobox
+  comuna                                 Comuna
+  fonte                                  Fonte (antiga Casa da Matriz)
+  galeria-cafe                           Galeria Café
+  quartinho-bar                          Quartinho Bar
+  bosque-bar                             Bosque Bar
+  lapa-40                                Lapa 40°
+  rua-sao-francisco-da-prainha           Rua São Francisco da Prainha
+  baixo-gavea                            Baixo Gávea
+  rua-arnaldo-quintela                   Rua Arnaldo Quintela
+
+BARES E BOTECOS
+  bar-urca                               Bar Urca
+  bar-do-omar                            Bar do Omar
+  bar-da-laje                            Bar da Laje
+  jobi                                   Jobi
+  bracarense                             Bracarense
+  bar-luiz                               Bar Luiz
+  armazem-senado                         Armazém Senado
+  nova-capela                            Nova Capela
+  bar-do-momo                            Bar do Momo
+  aconchego-carioca                      Aconchego Carioca
+  velho-adonis                           Velho Adonis
+  bode-cheiroso                          Bode Cheiroso
+  cachambeer                             Cachambeer
+  bar-lagoa                              Bar Lagoa
+  adega-perola                           Adega Pérola
+  bafo-da-prainha                        Bafo da Prainha
+  academia-da-cachaca                    Academia da Cachaça
+  belmonte                               Belmonte
+  pavao-azul                             Pavão Azul
+  amarelinho-da-cinelandia               Amarelinho da Cinelândia
+
+LANCHONETES E COMIDINHAS
+  confeitaria-colombo                    Confeitaria Colombo
+  cervantes                              Cervantes
+  galeto-sat-s                           Galeto Sat's
+  biscoito-globo-e-mate                  Biscoito Globo e mate na praia
+  casas-de-suco                          Casas de suco
+  bob-s-de-copacabana                    Bob's de Copacabana
+  rotisseria-sirio-libanesa              Rotisseria Sírio Libanesa
+  casa-paladino                          Casa Paladino
+  pizzaria-guanabara                     Pizzaria Guanabara
+  sorveterias-da-orla                    Sorveterias da orla
+  momo-gelato                            Momo Gelato (Copacabana Palace)
+  kurtos                                 Kurtos Rio — Kürtős com sorvete
+  cadeg                                  Cadeg — Mercado de Benfica
+
+RESTAURANTES
+  churrascarias                          Churrascarias de rodízio
+  feijoada-carioca                       Feijoada carioca
+  aprazivel                              Aprazível
+  quiosques-da-orla                      Quiosques da orla
+  rua-dias-ferreira                      Rua Dias Ferreira
+  restaurantes-do-leblon                 Restaurantes do Leblon
+  restaurantes-de-ipanema                Restaurantes de Ipanema
+  restaurantes-do-jardim-botanico        Restaurantes do Jardim Botânico
+  restaurantes-de-botafogo               Restaurantes de Botafogo
+  terra-brasilis                         Terra Brasilis
+  point-de-grumari                       Point de Grumari
+  vargem-grande                          Polo gastronômico de Vargem Grande
+
+COMPRAS E FEIRAS
+  saara                                  Saara
+  feira-hippie-de-ipanema                Feira Hippie de Ipanema
+  feira-de-sao-cristovao                 Feira de São Cristóvão
+  feira-do-rio-antigo                    Feira do Rio Antigo
+  feira-praca-xv                         Feira de Antiguidades da Praça XV
+  botafogo-praia-shopping                Botafogo Praia Shopping
+  shopping-rio-sul                       Shopping Rio Sul
+  shopping-leblon                        Shopping Leblon
+  villagemall                            VillageMall
+  barrashopping                          BarraShopping
+
+PASSEIOS E EXPERIÊNCIAS
+  ilha-da-gigoia                         Ilha da Gigóia
+  pedra-de-guaratiba                     Pedra de Guaratiba e o polo de frutos do mar
+  ilhas-tijucas                          Passeio de lancha nas Ilhas Tijucas
+  jogo-no-maracana                       Jogo no Maracanã com guia
+  tour-gastronomico-pequena-africa       Tour gastronômico na Pequena África
+  aula-de-samba                          Aula de samba no pé
+  ilha-de-paqueta                        Ilha de Paquetá
+  barca-para-niteroi                     Barca para Niterói
+  voo-livre                              Voo livre — asa-delta e parapente
+  voo-de-helicoptero                     Voo de helicóptero
+  passeio-maritimo-da-marinha            Passeio Marítimo da Marinha
+  leme-ao-pontal                         Do Leme ao Pontal
+  aula-de-surf                           Aula de surf
+  stand-up-paddle                        Stand up paddle e caiaque
+  ilhas-cagarras                         Ilhas Cagarras
+  santa-marta                            Turismo comunitário no Santa Marta
+  aula-de-capoeira                       Aula de capoeira
+  futevolei                              Futevôlei e vôlei de praia
+
+BATE-VOLTA
+  niteroi-mac                            Niterói — MAC e Caminho Niemeyer
+  fortaleza-de-santa-cruz-da-barra       Fortaleza de Santa Cruz da Barra
+  itacoatiara-e-o-costao                 Itacoatiara e o Costão
+  petropolis                             Petrópolis — Museu Imperial e centro histórico
+  serra-dos-orgaos                       Teresópolis — Parque Nacional da Serra dos Órgãos
+  arraial-do-cabo                        Arraial do Cabo
+  buzios                                 Búzios
+  ilha-grande                            Ilha Grande
+  paraty                                 Paraty
