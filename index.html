@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guia do Rio</title>
+<meta name="description" content="Guia turístico completo do Rio de Janeiro: pontos turísticos, praias, trilhas, museus, samba, baladas, botecos e lanchonetes, separados por público, com roteiros prontos, transporte e segurança.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+<a class="pular" href="#explorar">Pular para os lugares</a>
+
+<nav class="nav" aria-label="Seções do guia">
+  <a class="marca" href="#inicio" aria-label="Guia do Rio, início">
+    <svg viewBox="0 0 40 24" aria-hidden="true"><path d="M2 22 Q8 14 13 17 Q16 4 22 3 Q28 3 30 12 Q34 10 38 22 Z" fill="currentColor"/></svg>
+    <span>Guia do Rio</span>
+  </a>
+  <div class="nav-links scroll">
+    <a href="#publicos">Perfis</a>
+    <a href="#explorar">Explorar</a>
+    <a href="#roteiros">Roteiros</a>
+    <a href="#bate-volta">Bate-volta</a>
+    <a href="#agenda">Agenda</a>
+    <a href="#transporte">Transporte</a>
+    <a href="#seguranca">Segurança</a>
+    <a href="#dicas">Dicas</a>
+  </div>
+  <button class="fav-nav" id="favNav" type="button" aria-label="Ver favoritos">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg>
+    <span id="favCount">0</span>
+  </button>
+</nav>
+
+<header class="hero" id="inicio">
+  <div class="hero-texto">
+    <div class="hero-titulo">
+      <h1>Guia completo do Rio de Janeiro</h1>
+      <p class="lede">Pontos turísticos, praias, trilhas, museus, samba, baladas, botecos e lanchonetes da cidade inteira — separados por perfil, com roteiros prontos, transporte, segurança e a agenda do ano.</p>
+      <div class="cta">
+        <a class="btn btn-forte" href="#publicos">Escolher meu perfil</a>
+        <a class="btn" href="#roteiros">Roteiros prontos</a>
+      </div>
+    </div>
+    <dl class="numeros" id="numeros" aria-label="O guia em números"></dl>
+  </div>
+
+  <div class="hero-pic" aria-hidden="true">
+    <svg viewBox="0 0 1200 430" preserveAspectRatio="xMidYMax slice" class="cena">
+      <defs>
+        <linearGradient id="gCeu" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" style="stop-color:var(--ceu1)"/>
+          <stop offset="1" style="stop-color:var(--ceu2)"/>
+        </linearGradient>
+        <linearGradient id="gMar" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" style="stop-color:var(--mar1)"/>
+          <stop offset="1" style="stop-color:var(--mar2)"/>
+        </linearGradient>
+        <linearGradient id="gPedra" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" style="stop-color:var(--pedra-luz)"/>
+          <stop offset=".55" style="stop-color:var(--pedra)"/>
+          <stop offset="1" style="stop-color:var(--pedra-sombra)"/>
+        </linearGradient>
+        <radialGradient id="gSol" cx=".5" cy=".5" r=".5">
+          <stop offset="0" style="stop-color:var(--sol)"/>
+          <stop offset=".45" style="stop-color:var(--sol)"/>
+          <stop offset="1" style="stop-color:var(--sol);stop-opacity:0"/>
+        </radialGradient>
+        <pattern id="pOnda" width="64" height="34" patternUnits="userSpaceOnUse">
+          <rect width="64" height="34" style="fill:var(--calcada-claro)"/>
+          <path d="M0 10 Q16 -2 32 10 T64 10 V24 Q48 12 32 24 T0 24 Z" style="fill:var(--calcada-escuro)"/>
+        </pattern>
+      </defs>
+
+      <rect width="1200" height="430" fill="url(#gCeu)"/>
+      <circle cx="770" cy="250" r="120" fill="url(#gSol)" opacity=".55"/>
+      <circle cx="770" cy="250" r="44" class="astro"/>
+      <g class="estrelas" id="estrelas"></g>
+
+      <!-- serras ao fundo -->
+      <path d="M0 262 C90 236 150 250 220 230 C300 206 360 238 430 214 C520 184 600 226 680 210 C760 194 830 228 900 222 C980 214 1060 236 1200 220 L1200 320 L0 320 Z" class="serra3"/>
+
+      <!-- Corcovado com o Cristo -->
+      <path d="M360 320 C420 300 450 250 480 200 C505 160 520 132 536 118 C548 108 560 110 568 124 C590 160 610 214 650 258 C690 296 740 308 800 320 Z" class="serra2"/>
+      <path d="M536 118 C548 108 560 110 568 124 C590 160 610 214 650 258 C620 236 590 190 566 150 C560 140 552 132 536 118 Z" class="serra2-sombra"/>
+      <g class="cristo" transform="translate(551 84)">
+        <rect x="-4" y="22" width="8" height="12"/>
+        <path d="M-3 4 L3 4 L5 24 L-5 24 Z"/>
+        <rect x="-17" y="6" width="34" height="3.4" rx="1.5"/>
+        <circle cx="0" cy="1" r="3"/>
+      </g>
+
+      <!-- Dois Irmãos -->
+      <path d="M0 320 L0 236 C30 214 52 160 84 150 C112 142 126 196 140 210 C156 182 178 168 198 176 C226 188 246 250 290 320 Z" class="serra1"/>
+      <path d="M84 150 C112 142 126 196 140 210 C122 200 104 176 84 150 Z" class="serra1-sombra"/>
+
+      <!-- Morro da Urca e Pão de Açúcar -->
+      <path d="M780 320 C800 290 830 262 870 256 C910 250 930 268 950 300 L960 320 Z" class="serra1"/>
+      <path d="M930 320 C946 250 966 176 1000 150 C1028 128 1060 130 1082 160 C1108 196 1122 262 1136 320 Z" fill="url(#gPedra)"/>
+      <path d="M1000 150 C1028 128 1060 130 1082 160 C1060 146 1030 142 1000 150 Z" class="pedra-brilho"/>
+      <path d="M1096 320 C1110 290 1140 276 1200 280 L1200 320 Z" class="serra1"/>
+
+      <!-- cabo e bondinho -->
+      <line x1="872" y1="258" x2="1012" y2="150" class="cabo"/>
+      <line x1="872" y1="262" x2="1012" y2="154" class="cabo"/>
+      <g class="bonde">
+        <line x1="0" y1="0" x2="0" y2="8" class="cabo"/>
+        <rect x="-9" y="8" width="18" height="12" rx="3" class="bonde-caixa"/>
+        <rect x="-6" y="11" width="12" height="4" rx="1" class="bonde-janela"/>
+      </g>
+
+      <!-- cidade -->
+      <g id="cidade"></g>
+
+      <!-- mar -->
+      <rect y="320" width="1200" height="78" fill="url(#gMar)"/>
+      <g class="brilho-mar">
+        <rect x="726" y="330" width="88" height="3" rx="1.5"/>
+        <rect x="744" y="342" width="52" height="3" rx="1.5"/>
+        <rect x="756" y="354" width="30" height="3" rx="1.5"/>
+      </g>
+      <g class="veleiro" transform="translate(330 334)">
+        <path d="M0 0 L0 -34 L22 0 Z"/>
+        <path d="M-2 -28 L-2 0 L-16 0 Z" opacity=".75"/>
+        <path d="M-20 3 L26 3 L20 10 L-14 10 Z" class="casco"/>
+      </g>
+      <g class="veleiro" transform="translate(620 346) scale(.6)">
+        <path d="M0 0 L0 -34 L22 0 Z"/>
+        <path d="M-20 3 L26 3 L20 10 L-14 10 Z" class="casco"/>
+      </g>
+
+      <!-- areia e calçadão -->
+      <path d="M0 392 Q300 384 600 390 T1200 388 L1200 404 L0 404 Z" class="areia"/>
+      <rect y="402" width="1200" height="28" fill="url(#pOnda)"/>
+
+      <!-- palmeiras -->
+      <g class="palmeira" transform="translate(70 402)">
+        <path d="M0 0 C4 -40 10 -80 22 -112" class="tronco"/>
+        <path d="M22 -112 C0 -124 -26 -118 -44 -100 C-20 -108 0 -108 22 -112 Z"/>
+        <path d="M22 -112 C40 -130 70 -128 86 -110 C62 -118 42 -116 22 -112 Z"/>
+        <path d="M22 -112 C10 -136 18 -158 34 -166 C26 -146 26 -128 22 -112 Z"/>
+        <path d="M22 -112 C46 -112 68 -94 74 -72 C58 -92 42 -104 22 -112 Z"/>
+        <path d="M22 -112 C0 -106 -14 -86 -16 -64 C-4 -86 8 -102 22 -112 Z"/>
+      </g>
+      <g class="palmeira" transform="translate(1150 404) scale(-.8 .8)">
+        <path d="M0 0 C4 -40 10 -80 22 -112" class="tronco"/>
+        <path d="M22 -112 C0 -124 -26 -118 -44 -100 C-20 -108 0 -108 22 -112 Z"/>
+        <path d="M22 -112 C40 -130 70 -128 86 -110 C62 -118 42 -116 22 -112 Z"/>
+        <path d="M22 -112 C10 -136 18 -158 34 -166 C26 -146 26 -128 22 -112 Z"/>
+        <path d="M22 -112 C46 -112 68 -94 74 -72 C58 -92 42 -104 22 -112 Z"/>
+      </g>
+      <g class="aves">
+        <path d="M640 120 q8 -7 16 0 q8 -7 16 0"/>
+        <path d="M690 96 q6 -5 12 0 q6 -5 12 0"/>
+        <path d="M300 140 q7 -6 14 0 q7 -6 14 0"/>
+      </g>
+    </svg>
+  </div>
+</header>
+
+<main>
+
+<!-- ========== PERFIS ========== -->
+<section class="band band-mar" id="publicos" aria-labelledby="t-publicos">
+  <div class="largura">
+    <div class="sec-topo">
+      <h2 id="t-publicos">Para quem é a viagem?</h2>
+      <p>Escolha um perfil e o guia filtra os lugares certos para você — com uma dica feita para quem viaja desse jeito.</p>
+    </div>
+    <div class="perfis" id="perfis"></div>
+  </div>
+</section>
+
+<!-- ========== EXPLORAR ========== -->
+<section class="band" id="explorar" aria-labelledby="t-explorar">
+  <div class="largura">
+    <div class="sec-topo sec-topo-linha">
+      <div>
+        <h2 id="t-explorar">Explorar lugares</h2>
+        <p class="contagem" id="contagem" aria-live="polite"></p>
+      </div>
+      <p class="aviso">Preços e horários conferidos em <span id="atualizado"></span>. Podem mudar: confirme no canal oficial antes de ir.</p>
+    </div>
+
+    <div class="filtros" role="search">
+      <label class="campo campo-busca" for="busca">
+        <span>Buscar</span>
+        <input id="busca" type="search" placeholder="Ex.: samba, Lapa, bolinho, trilha fácil" autocomplete="off">
+      </label>
+      <label class="campo" for="fPublico">
+        <span>Perfil</span>
+        <select id="fPublico"></select>
+      </label>
+      <label class="campo" for="fZona">
+        <span>Região</span>
+        <select id="fZona"></select>
+      </label>
+      <label class="campo" for="fPreco">
+        <span>Preço</span>
+        <select id="fPreco"></select>
+      </label>
+      <div class="campo campo-botoes">
+        <span>&nbsp;</span>
+        <div class="botoes">
+          <button type="button" class="btn btn-chip" id="soFav" aria-pressed="false">Só favoritos</button>
+          <button type="button" class="btn btn-chip" id="limpar">Limpar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="cats scroll" id="cats" role="group" aria-label="Categorias"></div>
+
+    <div class="dica-perfil" id="dicaPerfil" hidden></div>
+
+    <div class="fav-barra" id="favBarra" hidden>
+      <p><strong id="favQtd">0</strong> favoritos salvos neste navegador.</p>
+      <div class="botoes">
+        <button type="button" class="btn btn-chip" id="copiarFav">Copiar minha lista</button>
+        <button type="button" class="btn btn-chip" id="limparFav">Apagar favoritos</button>
+      </div>
+    </div>
+
+    <div class="grade" id="grade"></div>
+    <div class="mais"><button type="button" class="btn btn-forte" id="verMais" hidden>Mostrar mais lugares</button></div>
+  </div>
+</section>
+
+<!-- ========== ROTEIROS ========== -->
+<section class="band band-areia" id="roteiros" aria-labelledby="t-roteiros">
+  <div class="largura">
+    <div class="sec-topo">
+      <h2 id="t-roteiros">Roteiros prontos</h2>
+      <p>Itinerários testados por região, com horários realistas e deslocamentos curtos. Use como base e troque o que quiser.</p>
+    </div>
+    <div class="abas scroll" id="abasRoteiro" role="tablist" aria-label="Roteiros"></div>
+    <div class="roteiro" id="roteiro" role="tabpanel"></div>
+  </div>
+</section>
+
+<!-- ========== BATE-VOLTA ========== -->
+<section class="band band-fundo" id="bate-volta" aria-labelledby="t-batevolta">
+  <div class="largura">
+    <div class="sec-topo">
+      <h2 id="t-batevolta">Bate-volta: um dia fora do Rio</h2>
+      <p>Niterói fica a uma barca de distância; a serra e a Região dos Lagos cabem num dia cheio. Toque num destino para ver fotos, como chegar e dicas.</p>
+    </div>
+    <div class="bv-grade" id="bvGrade"></div>
+    <div class="colunas">
+      <div class="painel">
+        <h3>Antes de sair</h3>
+        <ul class="lista">
+          <li><strong>Saia cedo.</strong> Na volta de domingos e feriados, a Ponte Rio–Niterói, a BR-040 e a Via Lagos costumam engarrafar.</li>
+          <li><strong>Ônibus intermunicipais</strong> saem da Rodoviária Novo Rio. Em feriado, compre a volta junto com a ida.</li>
+          <li><strong>Excursões de um dia</strong> para Arraial, Búzios e Ilha Grande saem de madrugada da Zona Sul e da Barra, com transporte e barco incluídos.</li>
+        </ul>
+      </div>
+      <div class="painel">
+        <h3>Quando vale dormir fora</h3>
+        <ul class="lista">
+          <li><strong>Paraty e Ilha Grande</strong> ficam a 2 a 4 horas de estrada: com uma noite, o passeio rende o dobro.</li>
+          <li><strong>Na serra</strong> (Petrópolis e Teresópolis) as noites são frias de maio a agosto. Leve casaco em qualquer época.</li>
+          <li><strong>Taxas de turismo</strong> municipais mudam com frequência. Confira no site da prefeitura do destino antes de ir.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="nota"><a href="#cat-batevolta">Ver os destinos de bate-volta na lista completa</a>, com filtros e favoritos.</p>
+  </div>
+</section>
+
+<!-- ========== AGENDA ========== -->
+<section class="band" id="agenda" aria-labelledby="t-agenda">
+  <div class="largura">
+    <div class="sec-topo">
+      <h2 id="t-agenda">O Rio mês a mês</h2>
+      <p>Feriados, festas e a melhor época para cada tipo de passeio. Os destaques são Carnaval e Réveillon.</p>
+    </div>
+    <div class="meses" id="meses"></div>
+  </div>
+</section>
+
+<!-- ========== TRANSPORTE ========== -->
+<section class="band band-fundo" id="transporte" aria-labelledby="t-transporte">
+  <div class="largura">
+    <div class="sec-topo">
+      <h2 id="t-transporte">Como chegar e circular</h2>
+      <p>Metrô e VLT resolvem quase tudo entre Zona Sul, Centro e Barra. Para Floresta da Tijuca, mirantes e praias da Zona Oeste, use táxi ou aplicativo.</p>
+    </div>
+
+    <div class="colunas">
+      <div class="painel">
+        <h3>Chegando à cidade</h3>
+        <ul class="lista">
+          <li><strong>Aeroporto do Galeão (GIG)</strong> — internacional, na Ilha do Governador, a cerca de 20 km do Centro. Táxis oficiais, aplicativos, ônibus executivos para Centro e Zona Sul e o BRT Transcarioca (rumo à Barra).</li>
+          <li><strong>Aeroporto Santos Dumont (SDU)</strong> — voos nacionais, no próprio Centro, com estação do VLT na porta. O pouso tem vista da Baía e do Pão de Açúcar.</li>
+          <li><strong>Rodoviária Novo Rio</strong> — em Santo Cristo, ligada ao Centro e ao Santos Dumont pelo VLT.</li>
+        </ul>
+      </div>
+      <div class="painel">
+        <h3>Linhas de metrô úteis</h3>
+        <ul class="lista">
+          <li><strong>Linha 1</strong> — Tijuca ↔ Centro ↔ Botafogo ↔ Copacabana ↔ Ipanema (General Osório).</li>
+          <li><strong>Linha 2</strong> — Pavuna ↔ Maracanã ↔ São Cristóvão ↔ Centro ↔ Botafogo.</li>
+          <li><strong>Linha 4</strong> — Ipanema ↔ Leblon ↔ São Conrado ↔ Barra (Jardim Oceânico).</li>
+          <li><strong>Estações-chave:</strong> Cinelândia e Carioca (Centro e Lapa), Cardeal Arcoverde, Siqueira Campos e Cantagalo (Copacabana), General Osório (Ipanema), Maracanã, São Cristóvão (Quinta da Boa Vista).</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="scroll tabela-caixa">
+      <table class="tabela stack">
+        <thead><tr><th>Meio</th><th>Tarifa (2026)</th><th>Como pagar</th><th>Bom para</th></tr></thead>
+        <tbody>
+          <tr><td>Ônibus municipal</td><td class="num">R$ 5,00</td><td>Cartão ou app Jaé (QR Code), Pix e cartão por aproximação em implantação. Não aceita dinheiro desde maio de 2026.</td><td>Toda a cidade</td></tr>
+          <tr><td>BRT</td><td class="num">R$ 5,00</td><td>Jaé ou cartão de débito por aproximação</td><td>Barra, Recreio, Galeão, Zona Norte</td></tr>
+          <tr><td>VLT Carioca</td><td class="num">R$ 5,00</td><td>Jaé ou cartão de débito por aproximação</td><td>Centro, Porto, Santos Dumont, Rodoviária</td></tr>
+          <tr><td>Metrô</td><td class="num">≈ R$ 8</td><td>Cartão por aproximação, Giro, Riocard ou Jaé</td><td>Zona Sul, Centro, Tijuca, Barra</td></tr>
+          <tr><td>Trem SuperVia</td><td class="num">R$ 7,60</td><td>Riocard e meios da concessionária</td><td>Zona Norte, Zona Oeste e Engenhão</td></tr>
+          <tr><td>Barcas</td><td class="num">tarifa estadual</td><td>Na estação da Praça XV</td><td>Niterói e Ilha de Paquetá</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="nota">Com o Jaé, você paga R$ 5 e tem direito às integrações do Bilhete Único Carioca entre ônibus, BRT e VLT dentro do prazo; o pagamento direto com cartão bancário não dá direito à integração. Táxis e aplicativos funcionam em toda a cidade; bicicletas compartilhadas cobrem a orla e a Lagoa.</p>
+  </div>
+</section>
+
+<!-- ========== SEGURANÇA ========== -->
+<section class="band band-coral" id="seguranca" aria-labelledby="t-seguranca">
+  <div class="largura">
+    <div class="sec-topo">
+      <h2 id="t-seguranca">Segurança e emergências</h2>
+      <p>A grande maioria das viagens ao Rio acontece sem problemas. Alguns hábitos simples fazem toda a diferença.</p>
+    </div>
+
+    <div class="emergencias">
+      <div class="tel"><span class="tel-num">190</span><span>Polícia Militar</span></div>
+      <div class="tel"><span class="tel-num">192</span><span>SAMU (ambulância)</span></div>
+      <div class="tel"><span class="tel-num">193</span><span>Bombeiros e salvamento no mar</span></div>
+      <div class="tel"><span class="tel-num">199</span><span>Defesa Civil</span></div>
+      <div class="tel"><span class="tel-num">1746</span><span>Central da Prefeitura</span></div>
+      <div class="tel"><span class="tel-num tel-num-p">(21) 2332-2893</span><span>DEAT — Delegacia de Apoio ao Turista</span></div>
+    </div>
+
+    <div class="colunas">
+      <div class="painel">
+        <h3>Hábitos que protegem</h3>
+        <ul class="lista">
+          <li>Na rua e na praia, celular guardado e nada de joias. Leve um documento, um cartão e pouco dinheiro.</li>
+          <li>À noite, prefira táxi ou aplicativo e confira a placa antes de entrar.</li>
+          <li>Em multidões (Réveillon, Carnaval, Lapa, Pedra do Sal), bolsa na frente do corpo e ponto de encontro combinado.</li>
+          <li>Na maquininha, confira o valor no visor antes de aproximar o cartão; no Pix, confira o nome do recebedor.</li>
+          <li>Compre ingressos só em canais oficiais.</li>
+          <li>Não siga o GPS por dentro de comunidades; visite-as apenas com guia morador credenciado.</li>
+        </ul>
+      </div>
+      <div class="painel">
+        <h3>Mar, sol, trilhas e chuva</h3>
+        <ul class="lista">
+          <li>Bandeira vermelha = mar perigoso. Nade perto dos postos de guarda-vidas.</li>
+          <li>Pego por uma corrente de retorno? Não lute contra ela: nade paralelo à praia e acene pedindo ajuda.</li>
+          <li>Protetor solar, chapéu e muita água. Evite sol forte entre 10h e 16h.</li>
+          <li>Trilhas: em grupo ou com guia, comece cedo, volte antes de escurecer e não suba depois de chuva forte.</li>
+          <li>Chuvas de verão alagam ruas rápido. Cadastre seu CEP no SMS 40199 para receber alertas da Defesa Civil.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="colunas">
+      <div class="painel">
+        <h3>Se algo acontecer</h3>
+        <p><strong>Turista estrangeiro:</strong> procure a DEAT — Av. Afrânio de Melo Franco, 159, Leblon. Telefones (21) 2332-2893 e (21) 2332-2887.</p>
+        <p><strong>Turista brasileiro:</strong> registre ocorrência na delegacia mais próxima.</p>
+      </div>
+      <div class="painel">
+        <h3>Informação turística (Riotur)</h3>
+        <ul class="lista">
+          <li><strong>Copacabana</strong> — Av. Princesa Isabel, 183; segunda a sexta, 9h às 18h.</li>
+          <li><strong>Aeroporto Santos Dumont</strong> — desembarque, todos os dias, 6h às 22h.</li>
+          <li><strong>Rodoviária Novo Rio</strong> — desembarque, todos os dias, 8h às 20h.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== DICAS ========== -->
+<section class="band" id="dicas" aria-labelledby="t-dicas">
+  <div class="largura">
+    <div class="sec-topo">
+      <h2 id="t-dicas">Dicas práticas</h2>
+      <p>O que todo carioca gostaria que o visitante soubesse antes de chegar.</p>
+    </div>
+
+    <div class="estacoes">
+      <div class="estacao est-verao"><h3>Dez a mar · Verão</h3><p>Calor de 30 °C a 40 °C, mar quente, Réveillon e Carnaval. Pancadas de chuva no fim da tarde. Reserve tudo com antecedência.</p></div>
+      <div class="estacao est-outono"><h3>Abr a jun · Outono</h3><p>Dias agradáveis e preços mais baixos. Excelente equilíbrio entre praia e passeios.</p></div>
+      <div class="estacao est-inverno"><h3>Jul a set · Inverno</h3><p>Ameno e seco, de 18 °C a 26 °C. A melhor época para trilhas, mirantes e Cristo sem nuvens.</p></div>
+      <div class="estacao est-primavera"><h3>Out a nov · Primavera</h3><p>Volta do calor, ensaios das escolas de samba e cidade menos cheia antes da alta temporada.</p></div>
+    </div>
+
+    <div class="colunas colunas-3">
+      <div class="painel">
+        <h3>Meia-entrada e grátis</h3>
+        <ul class="lista">
+          <li>Meia para estudantes com carteira estudantil (CIE), pessoas com 60+, pessoas com deficiência e jovens de baixa renda com ID Jovem.</li>
+          <li>Moradores da cidade ou do estado têm tarifas promocionais em várias atrações — leve comprovante de residência.</li>
+          <li>Às terças: Museu do Amanhã, MAR e Espaço Cultural da Marinha são gratuitos. CCBB, IMS e Paço Imperial, sempre.</li>
+        </ul>
+      </div>
+      <div class="painel">
+        <h3>Dinheiro e consumo</h3>
+        <ul class="lista">
+          <li>Pix e cartão são aceitos quase em todo lugar; leve algum dinheiro vivo para ambulantes e rodas de samba.</li>
+          <li>Os 10% de serviço vêm na conta e são opcionais.</li>
+          <li>Na praia, barraqueiros alugam cadeira e guarda-sol — combine o preço antes.</li>
+        </ul>
+      </div>
+      <div class="painel">
+        <h3>Bom saber</h3>
+        <ul class="lista">
+          <li>Fuso horário de Brasília (UTC−3), sem horário de verão.</li>
+          <li>Tomadas no padrão brasileiro; a voltagem no Rio é majoritariamente 127 V.</li>
+          <li>Aplaudir o pôr do sol no Arpoador e pedir "chope" (não "chopp") são tradições locais.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="sub">Dicionário carioca de bolso</h3>
+    <dl class="glossario">
+      <div><dt>Coé</dt><dd>"Qual é?" — o "e aí, tudo bem?" carioca.</dd></div>
+      <div><dt>Caô</dt><dd>Mentira, conversa fiada.</dd></div>
+      <div><dt>Maneiro</dt><dd>Legal, bacana.</dd></div>
+      <div><dt>Mermão</dt><dd>"Meu irmão" — chamado entre amigos.</dd></div>
+      <div><dt>Partiu</dt><dd>"Vamos agora."</dd></div>
+      <div><dt>Biscoito</dt><dd>Nunca diga "bolacha" no Rio.</dd></div>
+      <div><dt>Mate</dt><dd>Chá-mate gelado vendido na praia.</dd></div>
+      <div><dt>Pé-sujo</dt><dd>Boteco simples, raiz e geralmente ótimo.</dd></div>
+      <div><dt>Rolé</dt><dd>Passeio, volta pela cidade.</dd></div>
+      <div><dt>Sinistro</dt><dd>Incrível ou terrível — depende do tom.</dd></div>
+      <div><dt>Bolado</dt><dd>Chateado ou impressionado.</dd></div>
+      <div><dt>Valeu</dt><dd>Obrigado; também serve de tchau.</dd></div>
+    </dl>
+  </div>
+</section>
+
+</main>
+
+<footer class="rodape">
+  <div class="calcadao" aria-hidden="true"></div>
+  <div class="largura rodape-conteudo">
+    <div>
+      <p class="rodape-marca">Guia do Rio</p>
+      <p>Guia turístico independente da cidade do Rio de Janeiro. Informações conferidas em <span id="atualizado2"></span>; preços, horários e programações mudam com frequência — confirme nos canais oficiais antes de sair.</p>
+    </div>
+    <div>
+      <p class="rodape-marca">Canais oficiais</p>
+      <ul class="links">
+        <li><a href="https://riotur.rio/" target="_blank" rel="noopener">Riotur — turismo da Prefeitura</a></li>
+        <li><a href="https://carioca.rio/" target="_blank" rel="noopener">Carioca.rio — serviços da cidade</a></li>
+        <li><a href="https://www.gov.br/jbrj/pt-br" target="_blank" rel="noopener">Jardim Botânico do Rio de Janeiro</a></li>
+        <li><a href="https://www.marinha.mil.br/dphdm/" target="_blank" rel="noopener">Marinha — Ilha Fiscal e passeios</a></li>
+        <li><a href="https://bioparquedorio.com.br/" target="_blank" rel="noopener">BioParque do Rio</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<dialog class="modal" id="modal" aria-labelledby="mTitulo">
+  <div class="m-caixa" id="mCaixa">
+    <header class="m-topo">
+      <div class="m-cab">
+        <div id="mCat"></div>
+        <h2 id="mTitulo">Lugar</h2>
+        <p class="local" id="mLocal"></p>
+      </div>
+      <button type="button" class="m-fechar" id="mFechar" aria-label="Fechar">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </header>
+    <div class="m-carrossel">
+      <div class="m-trilho" id="mTrilho" aria-label="Fotos e vídeos" tabindex="0"></div>
+      <button type="button" class="m-seta m-ant" id="mAnt" aria-label="Anterior" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+      </button>
+      <button type="button" class="m-seta m-prox" id="mProx" aria-label="Próxima" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+      </button>
+      <p class="m-contador" id="mContador" aria-live="polite"></p>
+    </div>
+    <div class="m-minis" id="mMinis"></div>
+    <div class="m-info" id="mInfo"></div>
+  </div>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/dados.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
